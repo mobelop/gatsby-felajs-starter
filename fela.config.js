@@ -10,6 +10,6 @@ const namedKeysPlugin = namedKeys({
 export default {
   plugins: [ extend(), namedKeysPlugin ],
   enhancers: [ /* add your enhancers here */ ],
-  devMode: true,
+  devMode: process.env.NODE_ENV !== 'production',
   // ...
 }
