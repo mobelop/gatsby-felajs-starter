@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import Responsive from '../layout/Responsive'
-import widths from '../layout/widths'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -18,7 +16,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <Responsive width="100%" widths={widths}>
+      <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -30,10 +28,10 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
-            © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+            © 2019, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
-      </Responsive>
+      </>
     )}
   />
 )
